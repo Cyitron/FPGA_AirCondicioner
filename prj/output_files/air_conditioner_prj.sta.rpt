@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for air_conditioner_prj
-Fri Nov 17 11:35:22 2023
+Fri Nov 24 10:56:24 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -408,6 +408,18 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
+; s1_i[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s1_i[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s1_i[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s1_i[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s1_i[4]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s1_i[5]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s2_i[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s2_i[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s2_i[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s2_i[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s2_i[4]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s2_i[5]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk_ac_i                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -475,7 +487,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Nov 17 11:35:20 2023
+    Info: Processing started: Fri Nov 24 10:56:22 2023
 Info: Command: quartus_sta air_conditioner_prj -c air_conditioner_prj
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -529,7 +541,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4608 megabytes
-    Info: Processing ended: Fri Nov 17 11:35:22 2023
+    Info: Processing ended: Fri Nov 24 10:56:24 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

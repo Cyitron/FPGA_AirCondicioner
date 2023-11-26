@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/17/2023 11:35:23"
+-- DATE "11/24/2023 10:56:26"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -33,12 +33,26 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	Air_Conditioner IS
     PORT (
+	s1_i : IN std_logic_vector(5 DOWNTO 0);
+	s2_i : IN std_logic_vector(5 DOWNTO 0);
 	clk_ac_i : IN std_logic;
 	clk_o : OUT std_logic
 	);
 END Air_Conditioner;
 
 -- Design Ports Information
+-- s1_i[0]	=>  Location: PIN_R18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[1]	=>  Location: PIN_AB16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[2]	=>  Location: PIN_Y1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[3]	=>  Location: PIN_AB7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[4]	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[5]	=>  Location: PIN_AA16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[0]	=>  Location: PIN_U9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[1]	=>  Location: PIN_K21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[2]	=>  Location: PIN_B19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[3]	=>  Location: PIN_G11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[4]	=>  Location: PIN_T17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[5]	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- clk_o	=>  Location: PIN_AA20,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- clk_ac_i	=>  Location: PIN_G21,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
@@ -53,11 +67,25 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
+SIGNAL ww_s1_i : std_logic_vector(5 DOWNTO 0);
+SIGNAL ww_s2_i : std_logic_vector(5 DOWNTO 0);
 SIGNAL ww_clk_ac_i : std_logic;
 SIGNAL ww_clk_o : std_logic;
 SIGNAL \U00|altpll_component|auto_generated|pll1_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \U00|altpll_component|auto_generated|pll1_CLK_bus\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \U00|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \s1_i[0]~input_o\ : std_logic;
+SIGNAL \s1_i[1]~input_o\ : std_logic;
+SIGNAL \s1_i[2]~input_o\ : std_logic;
+SIGNAL \s1_i[3]~input_o\ : std_logic;
+SIGNAL \s1_i[4]~input_o\ : std_logic;
+SIGNAL \s1_i[5]~input_o\ : std_logic;
+SIGNAL \s2_i[0]~input_o\ : std_logic;
+SIGNAL \s2_i[1]~input_o\ : std_logic;
+SIGNAL \s2_i[2]~input_o\ : std_logic;
+SIGNAL \s2_i[3]~input_o\ : std_logic;
+SIGNAL \s2_i[4]~input_o\ : std_logic;
+SIGNAL \s2_i[5]~input_o\ : std_logic;
 SIGNAL \clk_ac_i~input_o\ : std_logic;
 SIGNAL \U00|altpll_component|auto_generated|wire_pll1_fbout\ : std_logic;
 SIGNAL \U00|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
@@ -65,6 +93,8 @@ SIGNAL \U00|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 
 
 BEGIN
 
+ww_s1_i <= s1_i;
+ww_s2_i <= s2_i;
 ww_clk_ac_i <= clk_ac_i;
 clk_o <= ww_clk_o;
 ww_devoe <= devoe;
@@ -208,6 +238,138 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	outclk => \U00|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
+
+-- Location: IOIBUF_X41_Y9_N22
+\s1_i[0]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s1_i(0),
+	o => \s1_i[0]~input_o\);
+
+-- Location: IOIBUF_X28_Y0_N15
+\s1_i[1]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s1_i(1),
+	o => \s1_i[1]~input_o\);
+
+-- Location: IOIBUF_X0_Y6_N8
+\s1_i[2]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s1_i(2),
+	o => \s1_i[2]~input_o\);
+
+-- Location: IOIBUF_X11_Y0_N8
+\s1_i[3]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s1_i(3),
+	o => \s1_i[3]~input_o\);
+
+-- Location: IOIBUF_X7_Y29_N29
+\s1_i[4]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s1_i(4),
+	o => \s1_i[4]~input_o\);
+
+-- Location: IOIBUF_X28_Y0_N22
+\s1_i[5]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s1_i(5),
+	o => \s1_i[5]~input_o\);
+
+-- Location: IOIBUF_X9_Y0_N1
+\s2_i[0]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s2_i(0),
+	o => \s2_i[0]~input_o\);
+
+-- Location: IOIBUF_X41_Y19_N8
+\s2_i[1]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s2_i(1),
+	o => \s2_i[1]~input_o\);
+
+-- Location: IOIBUF_X32_Y29_N1
+\s2_i[2]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s2_i(2),
+	o => \s2_i[2]~input_o\);
+
+-- Location: IOIBUF_X14_Y29_N15
+\s2_i[3]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s2_i(3),
+	o => \s2_i[3]~input_o\);
+
+-- Location: IOIBUF_X41_Y2_N1
+\s2_i[4]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s2_i(4),
+	o => \s2_i[4]~input_o\);
+
+-- Location: IOIBUF_X41_Y4_N8
+\s2_i[5]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_s2_i(5),
+	o => \s2_i[5]~input_o\);
 END structure;
 
 
