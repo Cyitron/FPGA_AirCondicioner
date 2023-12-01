@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/24/2023 10:56:26"
+-- DATE "12/01/2023 11:10:50"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -35,25 +35,31 @@ ENTITY 	Air_Conditioner IS
     PORT (
 	s1_i : IN std_logic_vector(5 DOWNTO 0);
 	s2_i : IN std_logic_vector(5 DOWNTO 0);
+	co2_i : IN std_logic;
 	clk_ac_i : IN std_logic;
-	clk_o : OUT std_logic
+	clk_o : OUT std_logic;
+	enable_led_o : OUT std_logic;
+	enable_buzz_o : OUT std_logic
 	);
 END Air_Conditioner;
 
 -- Design Ports Information
--- s1_i[0]	=>  Location: PIN_R18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[0]	=>  Location: PIN_H15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- s1_i[1]	=>  Location: PIN_AB16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s1_i[2]	=>  Location: PIN_Y1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s1_i[3]	=>  Location: PIN_AB7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s1_i[4]	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s1_i[5]	=>  Location: PIN_AA16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s2_i[0]	=>  Location: PIN_U9,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s2_i[1]	=>  Location: PIN_K21,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s2_i[2]	=>  Location: PIN_B19,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s2_i[3]	=>  Location: PIN_G11,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s2_i[4]	=>  Location: PIN_T17,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- s2_i[5]	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[2]	=>  Location: PIN_F15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[3]	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[4]	=>  Location: PIN_U8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s1_i[5]	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[0]	=>  Location: PIN_M2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[1]	=>  Location: PIN_AA16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[2]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[3]	=>  Location: PIN_N14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[4]	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- s2_i[5]	=>  Location: PIN_V16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- clk_o	=>  Location: PIN_AA20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- enable_led_o	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- enable_buzz_o	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- co2_i	=>  Location: PIN_U12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- clk_ac_i	=>  Location: PIN_G21,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
@@ -69,8 +75,11 @@ SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_s1_i : std_logic_vector(5 DOWNTO 0);
 SIGNAL ww_s2_i : std_logic_vector(5 DOWNTO 0);
+SIGNAL ww_co2_i : std_logic;
 SIGNAL ww_clk_ac_i : std_logic;
 SIGNAL ww_clk_o : std_logic;
+SIGNAL ww_enable_led_o : std_logic;
+SIGNAL ww_enable_buzz_o : std_logic;
 SIGNAL \U00|altpll_component|auto_generated|pll1_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \U00|altpll_component|auto_generated|pll1_CLK_bus\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \U00|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
@@ -89,14 +98,18 @@ SIGNAL \s2_i[5]~input_o\ : std_logic;
 SIGNAL \clk_ac_i~input_o\ : std_logic;
 SIGNAL \U00|altpll_component|auto_generated|wire_pll1_fbout\ : std_logic;
 SIGNAL \U00|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
+SIGNAL \co2_i~input_o\ : std_logic;
 SIGNAL \U00|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
 
 BEGIN
 
 ww_s1_i <= s1_i;
 ww_s2_i <= s2_i;
+ww_co2_i <= co2_i;
 ww_clk_ac_i <= clk_ac_i;
 clk_o <= ww_clk_o;
+enable_led_o <= ww_enable_led_o;
+enable_buzz_o <= ww_enable_buzz_o;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
@@ -122,6 +135,30 @@ PORT MAP (
 	i => \U00|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	devoe => ww_devoe,
 	o => ww_clk_o);
+
+-- Location: IOOBUF_X0_Y24_N2
+\enable_led_o~output\ : cycloneiii_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => ww_enable_led_o);
+
+-- Location: IOOBUF_X41_Y14_N2
+\enable_buzz_o~output\ : cycloneiii_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \co2_i~input_o\,
+	devoe => ww_devoe,
+	o => ww_enable_buzz_o);
 
 -- Location: IOIBUF_X41_Y15_N1
 \clk_ac_i~input\ : cycloneiii_io_ibuf
@@ -239,7 +276,18 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \U00|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
 
--- Location: IOIBUF_X41_Y9_N22
+-- Location: IOIBUF_X26_Y0_N1
+\co2_i~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_co2_i,
+	o => \co2_i~input_o\);
+
+-- Location: IOIBUF_X35_Y29_N22
 \s1_i[0]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -261,7 +309,7 @@ PORT MAP (
 	i => ww_s1_i(1),
 	o => \s1_i[1]~input_o\);
 
--- Location: IOIBUF_X0_Y6_N8
+-- Location: IOIBUF_X39_Y29_N15
 \s1_i[2]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -272,7 +320,7 @@ PORT MAP (
 	i => ww_s1_i(2),
 	o => \s1_i[2]~input_o\);
 
--- Location: IOIBUF_X11_Y0_N8
+-- Location: IOIBUF_X7_Y29_N15
 \s1_i[3]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -283,7 +331,7 @@ PORT MAP (
 	i => ww_s1_i(3),
 	o => \s1_i[3]~input_o\);
 
--- Location: IOIBUF_X7_Y29_N29
+-- Location: IOIBUF_X3_Y0_N15
 \s1_i[4]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -294,7 +342,7 @@ PORT MAP (
 	i => ww_s1_i(4),
 	o => \s1_i[4]~input_o\);
 
--- Location: IOIBUF_X28_Y0_N22
+-- Location: IOIBUF_X7_Y29_N29
 \s1_i[5]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -305,7 +353,7 @@ PORT MAP (
 	i => ww_s1_i(5),
 	o => \s1_i[5]~input_o\);
 
--- Location: IOIBUF_X9_Y0_N1
+-- Location: IOIBUF_X0_Y13_N15
 \s2_i[0]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -316,7 +364,7 @@ PORT MAP (
 	i => ww_s2_i(0),
 	o => \s2_i[0]~input_o\);
 
--- Location: IOIBUF_X41_Y19_N8
+-- Location: IOIBUF_X28_Y0_N22
 \s2_i[1]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -327,7 +375,7 @@ PORT MAP (
 	i => ww_s2_i(1),
 	o => \s2_i[1]~input_o\);
 
--- Location: IOIBUF_X32_Y29_N1
+-- Location: IOIBUF_X41_Y14_N22
 \s2_i[2]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -338,7 +386,7 @@ PORT MAP (
 	i => ww_s2_i(2),
 	o => \s2_i[2]~input_o\);
 
--- Location: IOIBUF_X14_Y29_N15
+-- Location: IOIBUF_X41_Y5_N15
 \s2_i[3]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -349,7 +397,7 @@ PORT MAP (
 	i => ww_s2_i(3),
 	o => \s2_i[3]~input_o\);
 
--- Location: IOIBUF_X41_Y2_N1
+-- Location: IOIBUF_X41_Y4_N8
 \s2_i[4]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -360,7 +408,7 @@ PORT MAP (
 	i => ww_s2_i(4),
 	o => \s2_i[4]~input_o\);
 
--- Location: IOIBUF_X41_Y4_N8
+-- Location: IOIBUF_X37_Y0_N29
 \s2_i[5]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (

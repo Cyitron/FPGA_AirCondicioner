@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for air_conditioner_prj
-Fri Nov 24 10:56:24 2023
+Fri Dec 01 11:10:48 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -20,38 +20,46 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  12. Slow 1200mV 85C Model Minimum Pulse Width: 'clk_ac_i'
  13. Clock to Output Times
  14. Minimum Clock to Output Times
- 15. Slow 1200mV 85C Model Metastability Report
- 16. Slow 1200mV 0C Model Fmax Summary
- 17. Slow 1200mV 0C Model Setup Summary
- 18. Slow 1200mV 0C Model Hold Summary
- 19. Slow 1200mV 0C Model Recovery Summary
- 20. Slow 1200mV 0C Model Removal Summary
- 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 22. Slow 1200mV 0C Model Minimum Pulse Width: 'clk_ac_i'
- 23. Clock to Output Times
- 24. Minimum Clock to Output Times
- 25. Slow 1200mV 0C Model Metastability Report
- 26. Fast 1200mV 0C Model Setup Summary
- 27. Fast 1200mV 0C Model Hold Summary
- 28. Fast 1200mV 0C Model Recovery Summary
- 29. Fast 1200mV 0C Model Removal Summary
- 30. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 31. Fast 1200mV 0C Model Minimum Pulse Width: 'clk_ac_i'
- 32. Clock to Output Times
- 33. Minimum Clock to Output Times
- 34. Fast 1200mV 0C Model Metastability Report
- 35. Multicorner Timing Analysis Summary
+ 15. Propagation Delay
+ 16. Minimum Propagation Delay
+ 17. Slow 1200mV 85C Model Metastability Report
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Minimum Pulse Width: 'clk_ac_i'
+ 25. Clock to Output Times
+ 26. Minimum Clock to Output Times
+ 27. Propagation Delay
+ 28. Minimum Propagation Delay
+ 29. Slow 1200mV 0C Model Metastability Report
+ 30. Fast 1200mV 0C Model Setup Summary
+ 31. Fast 1200mV 0C Model Hold Summary
+ 32. Fast 1200mV 0C Model Recovery Summary
+ 33. Fast 1200mV 0C Model Removal Summary
+ 34. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1200mV 0C Model Minimum Pulse Width: 'clk_ac_i'
  36. Clock to Output Times
  37. Minimum Clock to Output Times
- 38. Board Trace Model Assignments
- 39. Input Transition Times
- 40. Slow Corner Signal Integrity Metrics
- 41. Fast Corner Signal Integrity Metrics
- 42. Clock Transfers
- 43. Report TCCS
- 44. Report RSKM
- 45. Unconstrained Paths
- 46. TimeQuest Timing Analyzer Messages
+ 38. Propagation Delay
+ 39. Minimum Propagation Delay
+ 40. Fast 1200mV 0C Model Metastability Report
+ 41. Multicorner Timing Analysis Summary
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Propagation Delay
+ 45. Minimum Propagation Delay
+ 46. Board Trace Model Assignments
+ 47. Input Transition Times
+ 48. Slow Corner Signal Integrity Metrics
+ 49. Fast Corner Signal Integrity Metrics
+ 50. Clock Transfers
+ 51. Report TCCS
+ 52. Report RSKM
+ 53. Unconstrained Paths
+ 54. TimeQuest Timing Analyzer Messages
 
 
 
@@ -192,6 +200,24 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-------------------------------------------------+
 
 
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 6.091 ;    ;    ; 6.520 ;
++------------+---------------+-------+----+----+-------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 5.951 ;    ;    ; 6.369 ;
++------------+---------------+-------+----+----+-------+
+
+
 ----------------------------------------------
 ; Slow 1200mV 85C Model Metastability Report ;
 ----------------------------------------------
@@ -276,6 +302,24 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-------------------------------------------------+
 
 
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 5.667 ;    ;    ; 6.013 ;
++------------+---------------+-------+----+----+-------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 5.549 ;    ;    ; 5.885 ;
++------------+---------------+-------+----+----+-------+
+
+
 ---------------------------------------------
 ; Slow 1200mV 0C Model Metastability Report ;
 ---------------------------------------------
@@ -354,6 +398,24 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-------------------------------------------------+
 
 
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 3.637 ;    ;    ; 4.261 ;
++------------+---------------+-------+----+----+-------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 3.557 ;    ;    ; 4.172 ;
++------------+---------------+-------+----+----+-------+
+
+
 ---------------------------------------------
 ; Fast 1200mV 0C Model Metastability Report ;
 ---------------------------------------------
@@ -392,12 +454,32 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-------------------------------------------------+
 
 
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 6.091 ;    ;    ; 6.520 ;
++------------+---------------+-------+----+----+-------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; co2_i      ; enable_buzz_o ; 3.557 ;    ;    ; 4.172 ;
++------------+---------------+-------+----+----+-------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; clk_o         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enable_led_o  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enable_buzz_o ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
@@ -420,6 +502,7 @@ No synchronizer chains to report.
 ; s2_i[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; s2_i[4]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; s2_i[5]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; co2_i                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk_ac_i                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -433,6 +516,8 @@ No synchronizer chains to report.
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; clk_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; enable_led_o  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; enable_buzz_o ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.36 V              ; -0.00946 V          ; 0.111 V                              ; 0.027 V                              ; 6.46e-10 s                  ; 6.2e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.36 V             ; -0.00946 V         ; 0.111 V                             ; 0.027 V                             ; 6.46e-10 s                 ; 6.2e-10 s                  ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -444,6 +529,8 @@ No synchronizer chains to report.
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; clk_o         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; enable_led_o  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; enable_buzz_o ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.72 V              ; -0.0408 V           ; 0.163 V                              ; 0.075 V                              ; 4.51e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.72 V             ; -0.0408 V          ; 0.163 V                             ; 0.075 V                             ; 4.51e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -474,10 +561,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
 +---------------------------------+-------+------+
 
 
@@ -487,7 +574,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Nov 24 10:56:22 2023
+    Info: Processing started: Fri Dec 01 11:10:47 2023
 Info: Command: quartus_sta air_conditioner_prj -c air_conditioner_prj
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -540,9 +627,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.585
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4608 megabytes
-    Info: Processing ended: Fri Nov 24 10:56:24 2023
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Fri Dec 01 11:10:48 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

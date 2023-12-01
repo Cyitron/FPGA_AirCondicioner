@@ -65,5 +65,8 @@ set_global_assignment -name CDF_FILE output_files/Chain7.cdf
 set_global_assignment -name CDF_FILE output_files/Chain8.cdf
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name QIP_FILE sub_top.qip
+set_location_assignment PIN_B1 -to enable_buzz_o
+set_location_assignment PIN_J6 -to co2_i
+set_location_assignment PIN_J1 -to enable_led_o
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

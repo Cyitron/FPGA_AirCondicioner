@@ -1,5 +1,5 @@
 Fitter report for air_conditioner_prj
-Fri Nov 24 10:56:18 2023
+Fri Dec 01 11:10:43 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov 24 10:56:18 2023      ;
+; Fitter Status                      ; Successful - Fri Dec 01 11:10:43 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; air_conditioner_prj                        ;
 ; Top-level Entity Name              ; Air_Conditioner                            ;
@@ -74,7 +74,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0 / 15,408 ( 0 % )                         ;
 ;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                         ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 14 / 347 ( 4 % )                           ;
+; Total pins                         ; 17 / 347 ( 5 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -154,13 +154,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------+
-; I/O Assignment Warnings                         ;
-+----------+--------------------------------------+
-; Pin Name ; Reason                               ;
-+----------+--------------------------------------+
-; clk_o    ; Missing drive strength and slew rate ;
-+----------+--------------------------------------+
++------------------------------------------------------+
+; I/O Assignment Warnings                              ;
++---------------+--------------------------------------+
+; Pin Name      ; Reason                               ;
++---------------+--------------------------------------+
+; clk_o         ; Missing drive strength and slew rate ;
+; enable_led_o  ; Missing drive strength and slew rate ;
+; enable_buzz_o ; Missing drive strength and slew rate ;
++---------------+--------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -169,8 +171,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 41 ) ; 0.00 % ( 0 / 41 )          ; 0.00 % ( 0 / 41 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 41 ) ; 0.00 % ( 0 / 41 )          ; 0.00 % ( 0 / 41 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 47 ) ; 0.00 % ( 0 / 47 )          ; 0.00 % ( 0 / 47 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 47 ) ; 0.00 % ( 0 / 47 )          ; 0.00 % ( 0 / 47 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -193,7 +195,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 29 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 35 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 12 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -230,7 +232,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ;                                             ;                     ;
 ; Total LABs:  partially or completely used   ; 0 / 963 ( 0 % )     ;
 ; Virtual pins                                ; 0                   ;
-; I/O pins                                    ; 14 / 347 ( 4 % )    ;
+; I/O pins                                    ; 17 / 347 ( 5 % )    ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )      ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )       ;
 ;                                             ;                     ;
@@ -249,8 +251,8 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
 ; Maximum fan-out                             ; 2                   ;
 ; Highest non-global fan-out                  ; 1                   ;
-; Total fan-out                               ; 23                  ;
-; Average fan-out                             ; 0.57                ;
+; Total fan-out                               ; 27                  ;
+; Average fan-out                             ; 0.59                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -285,7 +287,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; Total LABs:  partially or completely used   ; 0 / 963 ( 0 % )   ; 0 / 963 ( 0 % )                ;
 ;                                             ;                   ;                                ;
 ; Virtual pins                                ; 0                 ; 0                              ;
-; I/O pins                                    ; 14                ; 0                              ;
+; I/O pins                                    ; 17                ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 112 ( 0 % )   ; 0 / 112 ( 0 % )                ;
 ; Total memory bits                           ; 0                 ; 0                              ;
 ; Total RAM block bits                        ; 0                 ; 0                              ;
@@ -299,7 +301,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ;     -- Registered Output Connections        ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Internal Connections                        ;                   ;                                ;
-;     -- Total Connections                    ; 16                ; 9                              ;
+;     -- Total Connections                    ; 20                ; 9                              ;
 ;     -- Registered Connections               ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; External Connections                        ;                   ;                                ;
@@ -307,8 +309,8 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ;     -- hard_block:auto_generated_inst       ; 2                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Partition Interface                         ;                   ;                                ;
-;     -- Input Ports                          ; 13                ; 1                              ;
-;     -- Output Ports                         ; 1                 ; 1                              ;
+;     -- Input Ports                          ; 14                ; 1                              ;
+;     -- Output Ports                         ; 3                 ; 1                              ;
 ;     -- Bidir Ports                          ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Registered Ports                            ;                   ;                                ;
@@ -333,28 +335,31 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; clk_ac_i ; G21   ; 6        ; 41           ; 15           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; s1_i[0]  ; R18   ; 5        ; 41           ; 9            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; co2_i    ; U12   ; 4        ; 26           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s1_i[0]  ; H15   ; 7        ; 35           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; s1_i[1]  ; AB16  ; 4        ; 28           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s1_i[2]  ; Y1    ; 2        ; 0            ; 6            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s1_i[3]  ; AB7   ; 3        ; 11           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s1_i[4]  ; F10   ; 8        ; 7            ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s1_i[5]  ; AA16  ; 4        ; 28           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s2_i[0]  ; U9    ; 3        ; 9            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s2_i[1]  ; K21   ; 6        ; 41           ; 19           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s2_i[2]  ; B19   ; 7        ; 32           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s2_i[3]  ; G11   ; 8        ; 14           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s2_i[4]  ; T17   ; 5        ; 41           ; 2            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; s2_i[5]  ; Y21   ; 5        ; 41           ; 4            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s1_i[2]  ; F15   ; 7        ; 39           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s1_i[3]  ; B5    ; 8        ; 7            ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s1_i[4]  ; U8    ; 3        ; 3            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s1_i[5]  ; F10   ; 8        ; 7            ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s2_i[0]  ; M2    ; 2        ; 0            ; 13           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s2_i[1]  ; AA16  ; 4        ; 28           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s2_i[2]  ; M21   ; 5        ; 41           ; 14           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s2_i[3]  ; N14   ; 5        ; 41           ; 5            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s2_i[4]  ; Y21   ; 5        ; 41           ; 4            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; s2_i[5]  ; V16   ; 4        ; 37           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; clk_o ; AA20  ; 4        ; 37           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; clk_o         ; AA20  ; 4        ; 37           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; enable_buzz_o ; M16   ; 5        ; 41           ; 14           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; enable_led_o  ; J6    ; 1        ; 0            ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -375,8 +380,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; L17      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; K20      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; K22      ; DIFFIO_R16n, nCEO           ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; K21      ; DIFFIO_R16p, CLKUSR         ; Use as regular IO        ; s2_i[1]                 ; Dual Purpose Pin          ;
-; F10      ; DIFFIO_T6p, DATA6           ; Use as regular IO        ; s1_i[4]                 ; Dual Purpose Pin          ;
+; F10      ; DIFFIO_T6p, DATA6           ; Use as regular IO        ; s1_i[5]                 ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -385,13 +389,13 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 +----------+-----------------+---------------+--------------+
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
-; 1        ; 4 / 33 ( 12 % ) ; 2.5V          ; --           ;
+; 1        ; 5 / 33 ( 15 % ) ; 2.5V          ; --           ;
 ; 2        ; 1 / 48 ( 2 % )  ; 2.5V          ; --           ;
-; 3        ; 2 / 46 ( 4 % )  ; 2.5V          ; --           ;
-; 4        ; 3 / 41 ( 7 % )  ; 2.5V          ; --           ;
-; 5        ; 3 / 46 ( 7 % )  ; 2.5V          ; --           ;
-; 6        ; 3 / 43 ( 7 % )  ; 2.5V          ; --           ;
-; 7        ; 1 / 47 ( 2 % )  ; 2.5V          ; --           ;
+; 3        ; 1 / 46 ( 2 % )  ; 2.5V          ; --           ;
+; 4        ; 5 / 41 ( 12 % ) ; 2.5V          ; --           ;
+; 5        ; 4 / 46 ( 9 % )  ; 2.5V          ; --           ;
+; 6        ; 2 / 43 ( 5 % )  ; 2.5V          ; --           ;
+; 7        ; 2 / 47 ( 4 % )  ; 2.5V          ; --           ;
 ; 8        ; 2 / 43 ( 5 % )  ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
@@ -438,7 +442,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; AA13     ; 138        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA14     ; 140        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA15     ; 145        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AA16     ; 149        ; 4        ; s1_i[5]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA16     ; 149        ; 4        ; s2_i[1]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA17     ; 151        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA18     ; 163        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA19     ; 164        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -451,7 +455,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; AB4      ; 107        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB5      ; 109        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB6      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AB7      ; 116        ; 3        ; s1_i[3]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB7      ; 116        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB8      ; 124        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB9      ; 127        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB10     ; 133        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -471,7 +475,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; B2       ; 1          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; B3       ; 355        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B4       ; 351        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B5       ; 346        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B5       ; 346        ; 8        ; s1_i[3]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B6       ; 337        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B7       ; 335        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B8       ; 333        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -485,7 +489,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; B16      ; 299        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B17      ; 297        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B18      ; 292        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B19      ; 289        ; 7        ; s2_i[2]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B19      ; 289        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B20      ; 285        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B21      ; 269        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; B22      ; 268        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -564,12 +568,12 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; F7       ; 360        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F8       ; 352        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F9       ; 347        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F10      ; 348        ; 8        ; s1_i[4]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F10      ; 348        ; 8        ; s1_i[5]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F11      ; 318        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F12      ; 302        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F13      ; 306        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F14      ; 279        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F15      ; 276        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F15      ; 276        ; 7        ; s1_i[2]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F16      ; 274        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F17      ; 272        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F18      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -587,7 +591,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; G8       ; 353        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G9       ; 342        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G10      ; 341        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G11      ; 331        ; 8        ; s2_i[3]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G11      ; 331        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G12      ; 305        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G13      ; 295        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G14      ; 280        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -613,7 +617,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; H12      ; 304        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H13      ; 303        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H14      ; 288        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H15      ; 287        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H15      ; 287        ; 7        ; s1_i[0]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H16      ; 259        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H17      ; 265        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H18      ; 257        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -626,7 +630,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; J3       ; 27         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J4       ; 24         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J6       ; 12         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J6       ; 12         ; 1        ; enable_led_o                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J7       ; 22         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J8       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -663,7 +667,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; K18      ; 248        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K19      ; 237        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; K20      ; 231        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; K21      ; 240        ; 6        ; s2_i[1]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K21      ; 240        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K22      ; 239        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L1       ; 35         ; 1        ; #TMS                                                      ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; L2       ; 34         ; 1        ; #TCK                                                      ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -688,7 +692,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; L21      ; 235        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L22      ; 234        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M1       ; 45         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; M2       ; 44         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; M2       ; 44         ; 2        ; s2_i[0]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M3       ; 47         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M4       ; 46         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M5       ; 51         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -702,12 +706,12 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; M13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M14      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; M15      ; 195        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; M16      ; 222        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; M16      ; 222        ; 5        ; enable_buzz_o                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M17      ; 228        ; 6        ; ^MSEL0                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; M18      ; 227        ; 6        ; ^CONF_DONE                                                ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; M19      ; 221        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M20      ; 220        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; M21      ; 219        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; M21      ; 219        ; 5        ; s2_i[2]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M22      ; 218        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N1       ; 49         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N2       ; 48         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -722,7 +726,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; N11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N14      ; 189        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; N14      ; 189        ; 5        ; s2_i[3]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N15      ; 196        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N16      ; 205        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N17      ; 214        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -770,7 +774,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; R15      ; 176        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R16      ; 172        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R17      ; 194        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; R18      ; 203        ; 5        ; s1_i[0]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R18      ; 203        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R19      ; 204        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R20      ; 200        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R21      ; 207        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -791,7 +795,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; T14      ; 160        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T15      ; 161        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T16      ; 171        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T17      ; 181        ; 5        ; s2_i[4]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T17      ; 181        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T18      ; 182        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T19      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; T20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -804,11 +808,11 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; U5       ;            ;          ; GNDA1                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U6       ;            ;          ; VCCD_PLL1                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U7       ; 94         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; U8       ; 95         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; U9       ; 112        ; 3        ; s2_i[0]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; U8       ; 95         ; 3        ; s1_i[4]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; U9       ; 112        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; U10      ; 122        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; U11      ; 128        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; U12      ; 147        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; U12      ; 147        ; 4        ; co2_i                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; U13      ; 156        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; U14      ; 174        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; U15      ; 173        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -834,7 +838,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; V13      ; 154        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; V14      ; 157        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; V15      ; 158        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; V16      ; 168        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; V16      ; 168        ; 4        ; s2_i[5]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V17      ;            ;          ; VCCD_PLL4                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V18      ;            ;          ; GNDA4                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V19      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -863,7 +867,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; W20      ; 183        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; W21      ; 191        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; W22      ; 190        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; Y1       ; 71         ; 2        ; s1_i[2]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y1       ; 71         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y2       ; 70         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y3       ; 99         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y4       ; 96         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -883,7 +887,7 @@ The pin-out file can be found in C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/proje
 ; Y18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y19      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; Y20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y21      ; 186        ; 5        ; s2_i[5]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y21      ; 186        ; 5        ; s2_i[4]                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y22      ; 185        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -945,7 +949,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                ; Library Name ;
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------+--------------+
-; |Air_Conditioner                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 14   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Air_Conditioner                                                                   ; work         ;
+; |Air_Conditioner                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 17   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Air_Conditioner                                                                   ; work         ;
 ;    |pll_top:U00|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Air_Conditioner|pll_top:U00                                                       ; work         ;
 ;       |altpll:altpll_component|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Air_Conditioner|pll_top:U00|altpll:altpll_component                               ; work         ;
 ;          |pll_top_altpll:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Air_Conditioner|pll_top:U00|altpll:altpll_component|pll_top_altpll:auto_generated ; work         ;
@@ -953,47 +957,52 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                      ;
-+----------+----------+---------------+---------------+-----------------------+-----+------+
-; Name     ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
-+----------+----------+---------------+---------------+-----------------------+-----+------+
-; s1_i[0]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s1_i[1]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s1_i[2]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s1_i[3]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s1_i[4]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s1_i[5]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s2_i[0]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s2_i[1]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s2_i[2]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s2_i[3]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s2_i[4]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; s2_i[5]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; clk_o    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; clk_ac_i ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-+----------+----------+---------------+---------------+-----------------------+-----+------+
++-----------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                           ;
++---------------+----------+---------------+---------------+-----------------------+-----+------+
+; Name          ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
++---------------+----------+---------------+---------------+-----------------------+-----+------+
+; s1_i[0]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s1_i[1]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s1_i[2]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s1_i[3]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s1_i[4]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s1_i[5]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s2_i[0]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s2_i[1]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s2_i[2]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s2_i[3]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s2_i[4]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; s2_i[5]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; clk_o         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; enable_led_o  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; enable_buzz_o ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; co2_i         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; clk_ac_i      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
++---------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; s1_i[0]             ;                   ;         ;
-; s1_i[1]             ;                   ;         ;
-; s1_i[2]             ;                   ;         ;
-; s1_i[3]             ;                   ;         ;
-; s1_i[4]             ;                   ;         ;
-; s1_i[5]             ;                   ;         ;
-; s2_i[0]             ;                   ;         ;
-; s2_i[1]             ;                   ;         ;
-; s2_i[2]             ;                   ;         ;
-; s2_i[3]             ;                   ;         ;
-; s2_i[4]             ;                   ;         ;
-; s2_i[5]             ;                   ;         ;
-; clk_ac_i            ;                   ;         ;
-+---------------------+-------------------+---------+
++-----------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                            ;
++-----------------------------+-------------------+---------+
+; Source Pin / Fanout         ; Pad To Core Index ; Setting ;
++-----------------------------+-------------------+---------+
+; s1_i[0]                     ;                   ;         ;
+; s1_i[1]                     ;                   ;         ;
+; s1_i[2]                     ;                   ;         ;
+; s1_i[3]                     ;                   ;         ;
+; s1_i[4]                     ;                   ;         ;
+; s1_i[5]                     ;                   ;         ;
+; s2_i[0]                     ;                   ;         ;
+; s2_i[1]                     ;                   ;         ;
+; s2_i[2]                     ;                   ;         ;
+; s2_i[3]                     ;                   ;         ;
+; s2_i[4]                     ;                   ;         ;
+; s2_i[5]                     ;                   ;         ;
+; co2_i                       ;                   ;         ;
+;      - enable_buzz_o~output ; 0                 ; 6       ;
+; clk_ac_i                    ;                   ;         ;
++-----------------------------+-------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -1020,6 +1029,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                              ; Fan-Out ;
 +-----------------------------------------------------------------------------------+---------+
 ; clk_ac_i~input                                                                    ; 1       ;
+; co2_i~input                                                                       ; 1       ;
 ; pll_top:U00|altpll:altpll_component|pll_top_altpll:auto_generated|wire_pll1_fbout ; 1       ;
 +-----------------------------------------------------------------------------------+---------+
 
@@ -1029,13 +1039,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+----------------------+
 ; Routing Resource Type ; Usage                ;
 +-----------------------+----------------------+
-; Block interconnects   ; 1 / 47,787 ( < 1 % ) ;
-; C16 interconnects     ; 0 / 1,804 ( 0 % )    ;
-; C4 interconnects      ; 0 / 31,272 ( 0 % )   ;
+; Block interconnects   ; 2 / 47,787 ( < 1 % ) ;
+; C16 interconnects     ; 1 / 1,804 ( < 1 % )  ;
+; C4 interconnects      ; 1 / 31,272 ( < 1 % ) ;
 ; Direct links          ; 0 / 47,787 ( 0 % )   ;
 ; Global clocks         ; 1 / 20 ( 5 % )       ;
 ; Local interconnects   ; 0 / 15,408 ( 0 % )   ;
-; R24 interconnects     ; 0 / 1,775 ( 0 % )    ;
+; R24 interconnects     ; 1 / 1,775 ( < 1 % )  ;
 ; R4 interconnects      ; 0 / 41,310 ( 0 % )   ;
 +-----------------------+----------------------+
 
@@ -1097,9 +1107,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 2            ; 0            ; 2            ; 0            ; 0            ; 14        ; 2            ; 0            ; 14        ; 14        ; 0            ; 1            ; 0            ; 0            ; 13           ; 0            ; 1            ; 13           ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 14        ; 0            ; 0            ;
+; Total Pass         ; 2            ; 0            ; 2            ; 0            ; 0            ; 17        ; 2            ; 0            ; 17        ; 17        ; 0            ; 3            ; 0            ; 0            ; 14           ; 0            ; 3            ; 14           ; 0            ; 0            ; 0            ; 3            ; 0            ; 0            ; 0            ; 0            ; 0            ; 17        ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 12           ; 14           ; 12           ; 14           ; 14           ; 0         ; 12           ; 14           ; 0         ; 0         ; 14           ; 13           ; 14           ; 14           ; 1            ; 14           ; 13           ; 1            ; 14           ; 14           ; 14           ; 13           ; 14           ; 14           ; 14           ; 14           ; 14           ; 0         ; 14           ; 14           ;
+; Total Inapplicable ; 15           ; 17           ; 15           ; 17           ; 17           ; 0         ; 15           ; 17           ; 0         ; 0         ; 17           ; 14           ; 17           ; 17           ; 3            ; 17           ; 14           ; 3            ; 17           ; 17           ; 17           ; 14           ; 17           ; 17           ; 17           ; 17           ; 17           ; 0         ; 17           ; 17           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; s1_i[0]            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; s1_i[1]            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1114,6 +1124,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; s2_i[4]            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; s2_i[5]            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk_o              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; enable_led_o       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; enable_buzz_o      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; co2_i              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk_ac_i           ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -1178,7 +1191,7 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location K1
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location K22
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 12 pins of 14 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 15 pins of 17 total pins
     Info (169086): Pin s1_i[0] not assigned to an exact location on the device
     Info (169086): Pin s1_i[1] not assigned to an exact location on the device
     Info (169086): Pin s1_i[2] not assigned to an exact location on the device
@@ -1191,6 +1204,9 @@ Critical Warning (169085): No exact pin location assignment(s) for 12 pins of 14
     Info (169086): Pin s2_i[3] not assigned to an exact location on the device
     Info (169086): Pin s2_i[4] not assigned to an exact location on the device
     Info (169086): Pin s2_i[5] not assigned to an exact location on the device
+    Info (169086): Pin enable_led_o not assigned to an exact location on the device
+    Info (169086): Pin enable_buzz_o not assigned to an exact location on the device
+    Info (169086): Pin co2_i not assigned to an exact location on the device
 Info (176353): Automatically promoted node pll_top:U00|altpll:altpll_component|pll_top_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C1 of PLL_2)
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G9
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'air_conditioner_prj.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1204,7 +1220,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 12 (unused VREF, 2.5V VCCIO, 12 input, 0 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 15 (unused VREF, 2.5V VCCIO, 13 input, 2 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1218,7 +1234,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
 Warning (15058): PLL "pll_top:U00|altpll:altpll_component|pll_top_altpll:auto_generated|pll1" is in normal or source synchronous mode with output clock "compensate_clock" set to clk[0] that is not fully compensated because it feeds an output pin -- only PLLs in zero delay buffer mode can fully compensate output pins
 Warning (15064): PLL "pll_top:U00|altpll:altpll_component|pll_top_altpll:auto_generated|pll1" output port clk[0] feeds output pin "clk_o~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1226,7 +1242,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y20 to location X9_Y29
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X31_Y10 to location X41_Y19
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -1236,13 +1252,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/Wodan/Desktop/Faculdade/UFSC/LDH/projetos/ProjetoFinal/prj/output_files/air_conditioner_prj.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4941 megabytes
-    Info: Processing ended: Fri Nov 24 10:56:18 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4937 megabytes
+    Info: Processing ended: Fri Dec 01 11:10:44 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
